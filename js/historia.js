@@ -168,9 +168,9 @@ let incio = gerarConteudo(
 
 
 let primeiro = gerarConteudo(
-    "imagens/w_mars-colony.jpg",
+    "imagens/431709.jpg",
     "meu titulo",
-    `Após ${nomePersonagem} negar, os humanos são informados sobre isso e iniciam as buscas.<br>
+    `Desconfiado dos objetivos dos robôs, ${nomePersonagem} nega a ter sua memória de volta. Os humanos são informados sobre isso e iniciam as buscas.<br>
     No meio de seu caminho um gato aparece, esse gato começou a entrar no caminho e tentou chamar sua atenção.<br>
      o combustível de ${nomePersonagem} está acabando e ele consegue vizualizar um posto de combustível próximo. O que ${nomePersonagem} irá fazer?`,
     [
@@ -181,7 +181,7 @@ let primeiro = gerarConteudo(
         
         {
             direct: 'conteudoB1',
-            legend: "Ir á um posto de reabastecimento"
+            legend: "Ir normalmente ao posto de reabastecimento"
         },
         {
             direct: 'conteudoB2',
@@ -195,8 +195,36 @@ let conteudoA = gerarConteudo(
     "meu titulo",
     `${nomePersonagem} segue o gato por um bom tempo, até que o gato leva ele á uma passagem secreta onde
     encontram-se vários artefatos misticos onde cada um deles representa algum mistério da humanidade.
-    O gato tenta levar ${nomePersonagem} até um deles, porém a bateria de ${nomePersonagem} acabou e ele não tinha pontos próximos`,
+    O gato tenta levar ${nomePersonagem} até um deles, porém a bateria de ${nomePersonagem} acabou e não havia postos de abastecimento próximos.
+    <br>
+    Naquele momento a jornada parecia ter acabado quando derrepente...`,
     []
+);
+
+let conteudoB1 = gerarConteudo(
+    "imagens/robo-1-cut.jpg",
+    "A Descoberta",
+    `${nomePersonagem} aparece no posto pedindo aos robôs locais para o reabastecerem,
+     eles reabastecem e fazem a manutenção das peças danificadas de ${nomePersonagem}. Tudo parecia perfeito, porém os humanos acabam encontrando ${nomePersonagem} e tentam o capturar. O que ${nomePersonagem} ira fazer? .  `,
+     [
+    {
+        direct: 'conteudoC3',
+        legend: "Reagir contra os humanos"
+    },
+    {
+        direct: 'conteudoC4',
+        legend: "Aceitar as ordens dos humanos"
+    }
+]
+);
+let conteudoC3 = gerarConteudo(
+    "imagens/robo-17062019171558794.jpeg",
+    "Revolta dos robos",
+    `${nomePersonagem} reage contra os humanos porém eles o matam na frente de todos os outros robôs. 
+    Isso gera uma grande revolta e protestos pelos robôs.`,
+     [
+    
+]
 );
 
 
