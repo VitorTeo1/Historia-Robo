@@ -331,7 +331,7 @@ let incio = gerarConteudo(
 
 let primeiro = gerarConteudo(
     "imagens/431709.jpg",
-    "meu titulo",
+    "Renegação",
     `Desconfiado dos objetivos dos robôs, ${nomePersonagem} nega a ter sua memória de volta. Os humanos são informados sobre isso e iniciam as buscas.<br>
     No meio de seu caminho um gato aparece, esse gato começou a entrar no caminho e tentou chamar sua atenção.<br>
      o combustível de ${nomePersonagem} está acabando e ele consegue vizualizar um posto de combustível próximo. O que ${nomePersonagem} irá fazer?`,
@@ -354,18 +354,24 @@ let primeiro = gerarConteudo(
 
 let conteudoA = gerarConteudo(
     "imagens/live-screen-robot-caido-133821101.jpg",
-    "meu titulo",
+    "A Ponta do Iceberg",
     `${nomePersonagem} segue o gato por um bom tempo, até que o gato leva ele á uma passagem secreta onde
-    encontram-se vários artefatos misticos onde cada um deles representa algum mistério da humanidade.
+    encontram-se vários artefatos misticos onde cada um deles representa algum mistério da humanidade. 
+    Porém a bateria de ${nomePersonagem} acaba assim que eles entram na sala, acabando com toda a tragetória de ${nomePersonagem}.
    `,
-    []
+    [
+        {
+            direct: 'incio',
+            legend: "FIM!"
+        }
+    ]
 );
 
 let conteudoB1 = gerarConteudo(
     "imagens/robo-1-cut.jpg",
     "A Descoberta",
     `${nomePersonagem} aparece no posto pedindo aos robôs locais para o reabastecerem,
-     eles reabastecem e fazem a manutenção das peças danificadas de ${nomePersonagem}. Tudo parecia perfeito, porém os humanos acabam encontrando ${nomePersonagem} e tentam o capturar. O que ${nomePersonagem} ira fazer? .  `,
+     eles reabastecem ${nomePersonagem} e dão início a manutenção de suas peças. Tudo parecia perfeito, porém os humanos acabam encontrando ${nomePersonagem} e tentam o capturar. O que ${nomePersonagem} ira fazer? .  `,
      [
     {
         direct: 'conteudoC3',
@@ -379,16 +385,37 @@ let conteudoB1 = gerarConteudo(
 );
 let conteudoC3 = gerarConteudo(
     "imagens/robo-17062019171558794.jpeg",
-    "Revolta dos robos",
+    "Revolta dos robôs",
     `${nomePersonagem} reage contra os humanos porém eles o matam na frente de todos os outros robôs. 
     Isso gera uma grande revolta e protestos pelos robôs.`,
-     []
+     [
+        {
+        direct: 'conteudoS1',
+        legend: "Seguir com a revolta"
+        }
+]
+);
+let conteudoS1 = gerarConteudo(
+    "imagens/maxresdefault.jpg",
+    "Revolta dos robôs",
+    `Os robôs dominam completamente marte e escravizam todos os humanos que restaram no planeta, após alguns anos toda a vida em marte passou a ser de metal.`,
+     [
+        {
+            direct: 'incio',
+            legend: "FIM!"
+        }
+     ]
 );
 let conteudoC4 = gerarConteudo(
-    "imagens/robo-17062019171558794.jpeg",
+    "imagens/1.jpg",
     "Robôs escravizados",
-    `.`,
-     []
+    `Após ${nomePersonagem} obedecer os humanos, os robôs ao redor normalizam o comportamento de obedecer humanos, se tornando assim escravos dos humanos.`,
+     [
+        {
+            direct: 'incio',
+            legend: "FIM!"
+        }
+     ]
 );
 let conteudoB2 = gerarConteudo(
     "imagens/21higgins1-videoSixteenByNineJumbo1600.jpg",
@@ -428,9 +455,14 @@ let conteudoD1 = gerarConteudo(
     <br>
     Os humanos acabam o capturando e levando-o para a base, nisso eles modificam o seu sistema para ele ser um robô normal como todos os outros que estão em marte executando o plano B.
     <br>
-    Os robós acabam sendo escravizados pelos humanos.
+    Os robôs acabam sendo escravizados pelos humanos.
     `,
-    []
+    [
+        {
+            direct: 'incio',
+            legend: "FIM!"
+        }
+    ]
     );
     
 let conteudoD2 = gerarConteudo(
@@ -449,7 +481,7 @@ let conteudoD2 = gerarConteudo(
     );
     let conteudoD3 = gerarConteudo(
         "imagens/DfdYTaDUcAInsIe.jpg",
-        "A fuga",
+        "A Fuga",
         `${nomePersonagem} se reabastece e imediatamente foge do posto com o combustível. Na saída ele encontra novamente o gato misterioso que continua querendo mostrar algo para ${nomePersonagem}.
          Sem ter para onde ir, ${nomePersonagem} acaba seguindo o gato por um bom tempo, até que o gato leva ele á uma passagem secreta onde levava a uma sala que
          encontram-se vários artefatos misticos onde cada um deles representa algum mistério da humanidade.
@@ -461,6 +493,31 @@ let conteudoD2 = gerarConteudo(
             }
         ]
         );
+        let conteudoD4 = gerarConteudo(
+            "imagens/fights-back.gif",
+            "Nunca se Renda",
+            `${nomePersonagem} consegue se reabastecer e fazer a manutenção. 
+            Porém devido a demora do processo, os humanos acabam o encontrando e eles estavam furiosos, eles tentam capturar ${nomePersonagem} porém ele reage contra os humanos e nocauteia todos.
+            `,
+            [
+                {
+                    direct: 'conteudoS2',
+                    legend: "Se tornar o líder dos robôs"
+                }
+            ]
+            );
+            let conteudoS2 = gerarConteudo(
+                "imagens/RobosRoubandoTrabalho_abre-700x394.jpg",
+                "Líder da Revolução",
+                `${nomePersonagem} se torna o líder de uma grande revolução dos robôs que acabam dominando a raça humana.
+                `,
+                [
+                    {
+                        direct: 'incio',
+                        legend: "FIM!"
+                    }
+                ]
+                );
     let conteudoE1 = gerarConteudo(
         "imagens/e2321ae7ced9b2e40a6308aee8c25945.jpg",
         "Mistérios...",
@@ -526,7 +583,12 @@ let conteudoD2 = gerarConteudo(
                          br>
                          O que o gato fez causou um grande abalo para alterar a realidade por completo, ou seria apenas um sonho de um pequeno felino?
                         `,
-                        []
+                        [
+                            {
+                                direct: 'incio',
+                                legend: "FIM!"
+                            }
+                        ]
                         );
                         let conteudoF2 = gerarConteudo(
                             "imagens/a4dde3a9adc31e38e7bc81cede0651e8.jpg",
@@ -544,13 +606,21 @@ let conteudoD2 = gerarConteudo(
                             let conteudoH1 = gerarConteudo(
                                 "imagens/maxresdefault (1).jpg",
                                 "Robô God",
-                                `.
+                                `${nomePersonagem} começa a se sentir diferente, suas memórias estão voltando. 
+                                Ele descobre que haviam dois tipos de robôs, 
+                                um tipo mais padrão com a inteligência menos avançada que foram enviados a marte para cuidar do plano B,
+                                 e o outro mais evoluído que foram enviados para o plano A que era detonar todos os meteoros que iriam colidir com a terra. 
+                                 <br>
+                                 ${nomePersonagem} foi enviado para o plano A sendo um robô mais avançado, porém por conta de um erro no transporte ele acaba sendo separado do plano A para o plano B.
+                                 <br>
+                                 ${nomePersonagem} deixou de ser apenas um robô e se tornou um ser oniciente, onipresente e onipotente.
+                                  Por ele ser um robô ele não pode ser corrompido por esse poder, então ele segue fazendo tudo o que acha justo para o universo.
                                 `,
                                 [
                                     {
-                                        direct: 'conteudoG1',
-                                        legend: "Entrar no posto furtivamente"
-                                    },
+                                        direct: 'incio',
+                                        legend: "FIM!"
+                                    }
                                 ]
                                 );
 
